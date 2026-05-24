@@ -1,0 +1,1991 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "tool_based_agents",
+        "label": "Tool-Based Agent Implementation",
+        "nodes": [
+          "agent_py_get_agent",
+          "intend_user_tools",
+          "agent_react_py_reactagent",
+          "agent_tools_py_toolagent"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.95,
+        "source_file": "/mnt/e/test/proj/myagent/src/agent"
+      },
+      {
+        "id": "intent_routing_system",
+        "label": "Intent Routing System",
+        "nodes": [
+          "agent_py_nlu",
+          "agent_py_intendforecast",
+          "intend_py_intend_map",
+          "intend_user_tools",
+          "intend_quary_knowledge",
+          "intend_agetn_react",
+          "intend_emotion_chat"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.95,
+        "source_file": "/mnt/e/test/proj/myagent/src/agent"
+      },
+      {
+        "id": "llm_configuration_system",
+        "label": "LLM Configuration System",
+        "nodes": [
+          "llm_py_base_llm",
+          "llm_py_advanced_llm",
+          "llm_py_embedding_model"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.95,
+        "source_file": "/mnt/e/test/proj/myagent/src/agent/llm.py"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "feishu.py",
+      "file_type": "code",
+      "source_file": "feishu.py",
+      "source_location": "L1",
+      "id": "feishu_py",
+      "community": 2,
+      "norm_label": "feishu.py"
+    },
+    {
+      "label": "setup_logger()",
+      "file_type": "code",
+      "source_file": "feishu.py",
+      "source_location": "L22",
+      "id": "myagent_feishu_setup_logger",
+      "community": 2,
+      "norm_label": "setup_logger()"
+    },
+    {
+      "label": "define_options()",
+      "file_type": "code",
+      "source_file": "feishu.py",
+      "source_location": "L33",
+      "id": "myagent_feishu_define_options",
+      "community": 2,
+      "norm_label": "define_options()"
+    },
+    {
+      "label": "agent_response()",
+      "file_type": "code",
+      "source_file": "feishu.py",
+      "source_location": "L47",
+      "id": "myagent_feishu_agent_response",
+      "community": 2,
+      "norm_label": "agent_response()"
+    },
+    {
+      "label": "do_p2_im_message_receive_v1()",
+      "file_type": "code",
+      "source_file": "feishu.py",
+      "source_location": "L62",
+      "id": "myagent_feishu_do_p2_im_message_receive_v1",
+      "community": 2,
+      "norm_label": "do_p2_im_message_receive_v1()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "feishu.py",
+      "source_location": "L127",
+      "id": "myagent_feishu_main",
+      "community": 2,
+      "norm_label": "main()"
+    },
+    {
+      "label": "all.py",
+      "file_type": "code",
+      "source_file": "reference/all.py",
+      "source_location": "L1",
+      "id": "reference_all_py",
+      "community": 13,
+      "norm_label": "all.py"
+    },
+    {
+      "label": "check_lark_sdk.py",
+      "file_type": "code",
+      "source_file": "reference/check_lark_sdk.py",
+      "source_location": "L1",
+      "id": "reference_check_lark_sdk_py",
+      "community": 14,
+      "norm_label": "check_lark_sdk.py"
+    },
+    {
+      "label": "check_own_client.py",
+      "file_type": "code",
+      "source_file": "reference/check_own_client.py",
+      "source_location": "L1",
+      "id": "reference_check_own_client_py",
+      "community": 15,
+      "norm_label": "check_own_client.py"
+    },
+    {
+      "label": "dingtalk.py",
+      "file_type": "code",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L1",
+      "id": "reference_dingtalk_py",
+      "community": 4,
+      "norm_label": "dingtalk.py"
+    },
+    {
+      "label": "setup_logger()",
+      "file_type": "code",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L14",
+      "id": "reference_dingtalk_setup_logger",
+      "community": 4,
+      "norm_label": "setup_logger()"
+    },
+    {
+      "label": "define_options()",
+      "file_type": "code",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L23",
+      "id": "reference_dingtalk_define_options",
+      "community": 4,
+      "norm_label": "define_options()"
+    },
+    {
+      "label": "create_agent()",
+      "file_type": "code",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L39",
+      "id": "reference_dingtalk_create_agent",
+      "community": 4,
+      "norm_label": "create_agent()"
+    },
+    {
+      "label": "LangChainBotHandler",
+      "file_type": "code",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L64",
+      "id": "reference_dingtalk_langchainbothandler",
+      "community": 4,
+      "norm_label": "langchainbothandler"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L65",
+      "id": "reference_dingtalk_langchainbothandler_init",
+      "community": 4,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".process()",
+      "file_type": "code",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L70",
+      "id": "reference_dingtalk_langchainbothandler_process",
+      "community": 4,
+      "norm_label": ".process()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L86",
+      "id": "reference_dingtalk_main",
+      "community": 4,
+      "norm_label": "main()"
+    },
+    {
+      "label": "memory.py",
+      "file_type": "code",
+      "source_file": "reference/memory.py",
+      "source_location": "L1",
+      "id": "reference_memory_py",
+      "community": 10,
+      "norm_label": "memory.py"
+    },
+    {
+      "label": "get_session_history()",
+      "file_type": "code",
+      "source_file": "reference/memory.py",
+      "source_location": "L24",
+      "id": "reference_memory_get_session_history",
+      "community": 10,
+      "norm_label": "get_session_history()"
+    },
+    {
+      "label": "rag.py",
+      "file_type": "code",
+      "source_file": "reference/rag.py",
+      "source_location": "L1",
+      "id": "reference_rag_py",
+      "community": 5,
+      "norm_label": "rag.py"
+    },
+    {
+      "label": "CustomEmbeddings",
+      "file_type": "code",
+      "source_file": "reference/rag.py",
+      "source_location": "L13",
+      "id": "reference_rag_customembeddings",
+      "community": 5,
+      "norm_label": "customembeddings"
+    },
+    {
+      "label": "Embeddings",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "embeddings",
+      "community": 5,
+      "norm_label": "embeddings"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "reference/rag.py",
+      "source_location": "L14",
+      "id": "reference_rag_customembeddings_init",
+      "community": 5,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".embed_documents()",
+      "file_type": "code",
+      "source_file": "reference/rag.py",
+      "source_location": "L18",
+      "id": "reference_rag_customembeddings_embed_documents",
+      "community": 5,
+      "norm_label": ".embed_documents()"
+    },
+    {
+      "label": ".embed_query()",
+      "file_type": "code",
+      "source_file": "reference/rag.py",
+      "source_location": "L29",
+      "id": "reference_rag_customembeddings_embed_query",
+      "community": 5,
+      "norm_label": ".embed_query()"
+    },
+    {
+      "label": "format_documents()",
+      "file_type": "code",
+      "source_file": "reference/rag.py",
+      "source_location": "L91",
+      "id": "reference_rag_format_documents",
+      "community": 5,
+      "norm_label": "format_documents()"
+    },
+    {
+      "label": "react.py",
+      "file_type": "code",
+      "source_file": "reference/react.py",
+      "source_location": "L1",
+      "id": "reference_react_py",
+      "community": 6,
+      "norm_label": "react.py"
+    },
+    {
+      "label": "get_current_weather()",
+      "file_type": "code",
+      "source_file": "reference/react.py",
+      "source_location": "L20",
+      "id": "reference_react_get_current_weather",
+      "community": 6,
+      "norm_label": "get_current_weather()"
+    },
+    {
+      "label": "calculate()",
+      "file_type": "code",
+      "source_file": "reference/react.py",
+      "source_location": "L31",
+      "id": "reference_react_calculate",
+      "community": 6,
+      "norm_label": "calculate()"
+    },
+    {
+      "label": "search_knowledge()",
+      "file_type": "code",
+      "source_file": "reference/react.py",
+      "source_location": "L70",
+      "id": "reference_react_search_knowledge",
+      "community": 6,
+      "norm_label": "search_knowledge()"
+    },
+    {
+      "label": "\u83b7\u53d6\u6307\u5b9a\u57ce\u5e02\u7684\u5f53\u524d\u5929\u6c14\u4fe1\u606f\u3002\u5f53\u7528\u6237\u8be2\u95ee\u5929\u6c14\u65f6\u4f7f\u7528\u6b64\u5de5\u5177\u3002",
+      "file_type": "rationale",
+      "source_file": "reference/react.py",
+      "source_location": "L21",
+      "id": "reference_react_rationale_21",
+      "community": 6,
+      "norm_label": "\u83b7\u53d6\u6307\u5b9a\u57ce\u5e02\u7684\u5f53\u524d\u5929\u6c14\u4fe1\u606f\u3002\u5f53\u7528\u6237\u8be2\u95ee\u5929\u6c14\u65f6\u4f7f\u7528\u6b64\u5de5\u5177\u3002"
+    },
+    {
+      "label": "\u8ba1\u7b97\u6570\u5b66\u8868\u8fbe\u5f0f\u3002\u5f53\u7528\u6237\u9700\u8981\u8fdb\u884c\u6570\u5b66\u8ba1\u7b97\u65f6\u4f7f\u7528\u6b64\u5de5\u5177\u3002     \u652f\u6301\u57fa\u672c\u7684\u56db\u5219\u8fd0\u7b97\uff0c\u5982 '2 + 3 * 4'\u3002",
+      "file_type": "rationale",
+      "source_file": "reference/react.py",
+      "source_location": "L32",
+      "id": "reference_react_rationale_32",
+      "community": 6,
+      "norm_label": "\u8ba1\u7b97\u6570\u5b66\u8868\u8fbe\u5f0f\u3002\u5f53\u7528\u6237\u9700\u8981\u8fdb\u884c\u6570\u5b66\u8ba1\u7b97\u65f6\u4f7f\u7528\u6b64\u5de5\u5177\u3002     \u652f\u6301\u57fa\u672c\u7684\u56db\u5219\u8fd0\u7b97,\u5982 '2 + 3 * 4'\u3002"
+    },
+    {
+      "label": "\u641c\u7d22\u77e5\u8bc6\u5e93\u83b7\u53d6\u76f8\u5173\u4fe1\u606f\u3002\u5f53\u7528\u6237\u8be2\u95ee\u4e8b\u5b9e\u6027\u95ee\u9898\u65f6\u4f7f\u7528\u6b64\u5de5\u5177\u3002",
+      "file_type": "rationale",
+      "source_file": "reference/react.py",
+      "source_location": "L71",
+      "id": "reference_react_rationale_71",
+      "community": 6,
+      "norm_label": "\u641c\u7d22\u77e5\u8bc6\u5e93\u83b7\u53d6\u76f8\u5173\u4fe1\u606f\u3002\u5f53\u7528\u6237\u8be2\u95ee\u4e8b\u5b9e\u6027\u95ee\u9898\u65f6\u4f7f\u7528\u6b64\u5de5\u5177\u3002"
+    },
+    {
+      "label": "agent.py",
+      "file_type": "code",
+      "source_file": "src/agent/agent.py",
+      "source_location": "L1",
+      "id": "src_agent_agent_py",
+      "community": 3,
+      "norm_label": "agent.py"
+    },
+    {
+      "label": "IntendForecast",
+      "file_type": "code",
+      "source_file": "src/agent/agent.py",
+      "source_location": "L7",
+      "id": "agent_agent_intendforecast",
+      "community": 3,
+      "norm_label": "intendforecast"
+    },
+    {
+      "label": "BaseModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "basemodel",
+      "community": 3,
+      "norm_label": "basemodel"
+    },
+    {
+      "label": "NLU()",
+      "file_type": "code",
+      "source_file": "src/agent/agent.py",
+      "source_location": "L11",
+      "id": "agent_agent_nlu",
+      "community": 3,
+      "norm_label": "nlu()"
+    },
+    {
+      "label": "get_agent()",
+      "file_type": "code",
+      "source_file": "src/agent/agent.py",
+      "source_location": "L23",
+      "id": "agent_agent_get_agent",
+      "community": 3,
+      "norm_label": "get_agent()"
+    },
+    {
+      "label": "agent_rag.py",
+      "file_type": "code",
+      "source_file": "src/agent/agent_rag.py",
+      "source_location": "L1",
+      "id": "src_agent_agent_rag_py",
+      "community": 8,
+      "norm_label": "agent_rag.py"
+    },
+    {
+      "label": "RAGAgent",
+      "file_type": "code",
+      "source_file": "src/agent/agent_rag.py",
+      "source_location": "L9",
+      "id": "agent_agent_rag_ragagent",
+      "community": 8,
+      "norm_label": "ragagent"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "src/agent/agent_rag.py",
+      "source_location": "L10",
+      "id": "agent_agent_rag_ragagent_init",
+      "community": 8,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "._format_documents()",
+      "file_type": "code",
+      "source_file": "src/agent/agent_rag.py",
+      "source_location": "L58",
+      "id": "agent_agent_rag_ragagent_format_documents",
+      "community": 8,
+      "norm_label": "._format_documents()"
+    },
+    {
+      "label": ".invoke()",
+      "file_type": "code",
+      "source_file": "src/agent/agent_rag.py",
+      "source_location": "L61",
+      "id": "agent_agent_rag_ragagent_invoke",
+      "community": 8,
+      "norm_label": ".invoke()"
+    },
+    {
+      "label": "agent_react.py",
+      "file_type": "code",
+      "source_file": "src/agent/agent_react.py",
+      "source_location": "L1",
+      "id": "src_agent_agent_react_py",
+      "community": 9,
+      "norm_label": "agent_react.py"
+    },
+    {
+      "label": "ReActAgent",
+      "file_type": "code",
+      "source_file": "src/agent/agent_react.py",
+      "source_location": "L8",
+      "id": "agent_agent_react_reactagent",
+      "community": 9,
+      "norm_label": "reactagent"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "src/agent/agent_react.py",
+      "source_location": "L9",
+      "id": "agent_agent_react_reactagent_init",
+      "community": 9,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".invoke()",
+      "file_type": "code",
+      "source_file": "src/agent/agent_react.py",
+      "source_location": "L22",
+      "id": "agent_agent_react_reactagent_invoke",
+      "community": 9,
+      "norm_label": ".invoke()"
+    },
+    {
+      "label": "agent_tools.py",
+      "file_type": "code",
+      "source_file": "src/agent/agent_tools.py",
+      "source_location": "L1",
+      "id": "src_agent_agent_tools_py",
+      "community": 3,
+      "norm_label": "agent_tools.py"
+    },
+    {
+      "label": "ToolAgent",
+      "file_type": "code",
+      "source_file": "src/agent/agent_tools.py",
+      "source_location": "L6",
+      "id": "agent_agent_tools_toolagent",
+      "community": 3,
+      "norm_label": "toolagent"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "src/agent/agent_tools.py",
+      "source_location": "L7",
+      "id": "agent_agent_tools_toolagent_init",
+      "community": 3,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".invoke()",
+      "file_type": "code",
+      "source_file": "src/agent/agent_tools.py",
+      "source_location": "L10",
+      "id": "agent_agent_tools_toolagent_invoke",
+      "community": 3,
+      "norm_label": ".invoke()"
+    },
+    {
+      "label": "agmem.py",
+      "file_type": "code",
+      "source_file": "src/agent/agmem.py",
+      "source_location": "L1",
+      "id": "src_agent_agmem_py",
+      "community": 16,
+      "norm_label": "agmem.py"
+    },
+    {
+      "label": "intend.py",
+      "file_type": "code",
+      "source_file": "src/agent/intend.py",
+      "source_location": "L1",
+      "id": "src_agent_intend_py",
+      "community": 17,
+      "norm_label": "intend.py"
+    },
+    {
+      "label": "llm.py",
+      "file_type": "code",
+      "source_file": "src/agent/llm.py",
+      "source_location": "L1",
+      "id": "src_agent_llm_py",
+      "community": 18,
+      "norm_label": "llm.py"
+    },
+    {
+      "label": "tool.py",
+      "file_type": "code",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L1",
+      "id": "src_agent_tools_tool_py",
+      "community": 1,
+      "norm_label": "tool.py"
+    },
+    {
+      "label": "get_stock_price()",
+      "file_type": "code",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L5",
+      "id": "tools_tool_get_stock_price",
+      "community": 1,
+      "norm_label": "get_stock_price()"
+    },
+    {
+      "label": "search_news()",
+      "file_type": "code",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L28",
+      "id": "tools_tool_search_news",
+      "community": 1,
+      "norm_label": "search_news()"
+    },
+    {
+      "label": "get_current_weather()",
+      "file_type": "code",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L59",
+      "id": "tools_tool_get_current_weather",
+      "community": 1,
+      "norm_label": "get_current_weather()"
+    },
+    {
+      "label": "calculate()",
+      "file_type": "code",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L70",
+      "id": "tools_tool_calculate",
+      "community": 1,
+      "norm_label": "calculate()"
+    },
+    {
+      "label": "search_knowledge()",
+      "file_type": "code",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L108",
+      "id": "tools_tool_search_knowledge",
+      "community": 1,
+      "norm_label": "search_knowledge()"
+    },
+    {
+      "label": "\u83b7\u53d6\u6307\u5b9a\u516c\u53f8\u7684\u80a1\u7968\u4ef7\u683c\u4fe1\u606f      Args:         company: \u516c\u53f8\u540d\u79f0\uff08\u5982\uff1a\u82f9\u679c\u516c\u53f8, \u5fae\u8f6f\u516c\u53f8, \u8c37\u6b4c\u516c\u53f8\uff09         timef",
+      "file_type": "rationale",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L6",
+      "id": "tools_tool_rationale_6",
+      "community": 1,
+      "norm_label": "\u83b7\u53d6\u6307\u5b9a\u516c\u53f8\u7684\u80a1\u7968\u4ef7\u683c\u4fe1\u606f      args:         company: \u516c\u53f8\u540d\u79f0(\u5982:\u82f9\u679c\u516c\u53f8, \u5fae\u8f6f\u516c\u53f8, \u8c37\u6b4c\u516c\u53f8)         timef"
+    },
+    {
+      "label": "\u641c\u7d22\u6307\u5b9a\u516c\u53f8\u7684\u8d22\u7ecf\u65b0\u95fb      Args:         company: \u516c\u53f8\u540d\u79f0     Return:         \u516c\u53f8\u7684\u8d22\u7ecf\u65b0\u95fb\uff0c\u6bcf\u4e2a\u65b0\u95fb\u5360\u4e00\u884c",
+      "file_type": "rationale",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L29",
+      "id": "tools_tool_rationale_29",
+      "community": 1,
+      "norm_label": "\u641c\u7d22\u6307\u5b9a\u516c\u53f8\u7684\u8d22\u7ecf\u65b0\u95fb      args:         company: \u516c\u53f8\u540d\u79f0     return:         \u516c\u53f8\u7684\u8d22\u7ecf\u65b0\u95fb,\u6bcf\u4e2a\u65b0\u95fb\u5360\u4e00\u884c"
+    },
+    {
+      "label": "\u83b7\u53d6\u6307\u5b9a\u57ce\u5e02\u7684\u5f53\u524d\u5929\u6c14\u4fe1\u606f\u3002\u5f53\u7528\u6237\u8be2\u95ee\u5929\u6c14\u65f6\u4f7f\u7528\u6b64\u5de5\u5177\u3002",
+      "file_type": "rationale",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L60",
+      "id": "tools_tool_rationale_60",
+      "community": 1,
+      "norm_label": "\u83b7\u53d6\u6307\u5b9a\u57ce\u5e02\u7684\u5f53\u524d\u5929\u6c14\u4fe1\u606f\u3002\u5f53\u7528\u6237\u8be2\u95ee\u5929\u6c14\u65f6\u4f7f\u7528\u6b64\u5de5\u5177\u3002"
+    },
+    {
+      "label": "\u8ba1\u7b97\u6570\u5b66\u8868\u8fbe\u5f0f\u3002\u5f53\u7528\u6237\u9700\u8981\u8fdb\u884c\u6570\u5b66\u8ba1\u7b97\u65f6\u4f7f\u7528\u6b64\u5de5\u5177\u3002",
+      "file_type": "rationale",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L71",
+      "id": "tools_tool_rationale_71",
+      "community": 1,
+      "norm_label": "\u8ba1\u7b97\u6570\u5b66\u8868\u8fbe\u5f0f\u3002\u5f53\u7528\u6237\u9700\u8981\u8fdb\u884c\u6570\u5b66\u8ba1\u7b97\u65f6\u4f7f\u7528\u6b64\u5de5\u5177\u3002"
+    },
+    {
+      "label": "\u641c\u7d22\u77e5\u8bc6\u5e93\u83b7\u53d6\u76f8\u5173\u4fe1\u606f\u3002\u5f53\u7528\u6237\u8be2\u95ee\u4e8b\u5b9e\u6027\u95ee\u9898\u65f6\u4f7f\u7528\u6b64\u5de5\u5177\u3002",
+      "file_type": "rationale",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L109",
+      "id": "tools_tool_rationale_109",
+      "community": 1,
+      "norm_label": "\u641c\u7d22\u77e5\u8bc6\u5e93\u83b7\u53d6\u76f8\u5173\u4fe1\u606f\u3002\u5f53\u7528\u6237\u8be2\u95ee\u4e8b\u5b9e\u6027\u95ee\u9898\u65f6\u4f7f\u7528\u6b64\u5de5\u5177\u3002"
+    },
+    {
+      "label": "test_mock.py",
+      "file_type": "code",
+      "source_file": "test/test_mock.py",
+      "source_location": "L1",
+      "id": "test_test_mock_py",
+      "community": 7,
+      "norm_label": "test_mock.py"
+    },
+    {
+      "label": "MockP2ImMessageReceiveV1",
+      "file_type": "code",
+      "source_file": "test/test_mock.py",
+      "source_location": "L13",
+      "id": "test_test_mock_mockp2immessagereceivev1",
+      "community": 7,
+      "norm_label": "mockp2immessagereceivev1"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "test/test_mock.py",
+      "source_location": "L14",
+      "id": "test_test_mock_mockp2immessagereceivev1_init",
+      "community": 7,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": "MockLarkClient",
+      "file_type": "code",
+      "source_file": "test/test_mock.py",
+      "source_location": "L24",
+      "id": "test_test_mock_mocklarkclient",
+      "community": 7,
+      "norm_label": "mocklarkclient"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "test/test_mock.py",
+      "source_location": "L25",
+      "id": "test_test_mock_mocklarkclient_init",
+      "community": 7,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".mock_reply()",
+      "file_type": "code",
+      "source_file": "test/test_mock.py",
+      "source_location": "L31",
+      "id": "test_test_mock_mocklarkclient_mock_reply",
+      "community": 7,
+      "norm_label": ".mock_reply()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "test/test_mock.py",
+      "source_location": "L43",
+      "id": "test_test_mock_main",
+      "community": 7,
+      "norm_label": "main()"
+    },
+    {
+      "label": "test_reply.py",
+      "file_type": "code",
+      "source_file": "test/test_reply.py",
+      "source_location": "L1",
+      "id": "test_test_reply_py",
+      "community": 19,
+      "norm_label": "test_reply.py"
+    },
+    {
+      "label": "Processed Messages Deque",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/feishu.py",
+      "source_location": "line 19",
+      "id": "feishu_processed_messages",
+      "community": 2,
+      "norm_label": "processed messages deque"
+    },
+    {
+      "label": "Feishu Message Handler",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/feishu.py",
+      "source_location": "line 62",
+      "id": "feishu_do_p2_im_message_receive_v1",
+      "community": 2,
+      "norm_label": "feishu message handler"
+    },
+    {
+      "label": "Agent Response Handler",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/feishu.py",
+      "source_location": "line 47",
+      "id": "feishu_agent_response",
+      "community": 20,
+      "norm_label": "agent response handler"
+    },
+    {
+      "label": "Agent Router",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent.py",
+      "source_location": "line 23",
+      "id": "agent_py_get_agent",
+      "community": 0,
+      "norm_label": "agent router"
+    },
+    {
+      "label": "Natural Language Understanding",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent.py",
+      "source_location": "line 11",
+      "id": "agent_py_nlu",
+      "community": 0,
+      "norm_label": "natural language understanding"
+    },
+    {
+      "label": "Intent Forecast Model",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent.py",
+      "source_location": "line 7",
+      "id": "agent_py_intendforecast",
+      "community": 0,
+      "norm_label": "intent forecast model"
+    },
+    {
+      "label": "RAG Agent",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent_rag.py",
+      "source_location": "line 9",
+      "id": "agent_rag_py_ragagent",
+      "community": 0,
+      "norm_label": "rag agent"
+    },
+    {
+      "label": "ReAct Agent",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent_react.py",
+      "source_location": "line 8",
+      "id": "agent_react_py_reactagent",
+      "community": 0,
+      "norm_label": "react agent"
+    },
+    {
+      "label": "Tool Agent",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent_tools.py",
+      "source_location": "line 6",
+      "id": "agent_tools_py_toolagent",
+      "community": 0,
+      "norm_label": "tool agent"
+    },
+    {
+      "label": "Agent Memory Singleton",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agmem.py",
+      "source_location": "line 3",
+      "id": "agmem_py_agentmemory",
+      "community": 12,
+      "norm_label": "agent memory singleton"
+    },
+    {
+      "label": "Intent Mapping Configuration",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/intend.py",
+      "source_location": "line 3",
+      "id": "intend_py_intend_map",
+      "community": 0,
+      "norm_label": "intent mapping configuration"
+    },
+    {
+      "label": "Base LLM Configuration",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/llm.py",
+      "source_location": "line 9",
+      "id": "llm_py_base_llm",
+      "community": 0,
+      "norm_label": "base llm configuration"
+    },
+    {
+      "label": "Advanced LLM Configuration",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/llm.py",
+      "source_location": "line 18",
+      "id": "llm_py_advanced_llm",
+      "community": 21,
+      "norm_label": "advanced llm configuration"
+    },
+    {
+      "label": "Embedding Model Configuration",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/llm.py",
+      "source_location": "line 27",
+      "id": "llm_py_embedding_model",
+      "community": 0,
+      "norm_label": "embedding model configuration"
+    },
+    {
+      "label": "Tool List",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/Tools/tool.py",
+      "source_location": "line 120",
+      "id": "tool_py_tool_list",
+      "community": 0,
+      "norm_label": "tool list"
+    },
+    {
+      "label": "Get Current Weather Tool",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/Tools/tool.py",
+      "source_location": "line 58",
+      "id": "tool_py_get_current_weather",
+      "community": 11,
+      "norm_label": "get current weather tool"
+    },
+    {
+      "label": "Calculate Expression Tool",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/Tools/tool.py",
+      "source_location": "line 69",
+      "id": "tool_py_calculate",
+      "community": 11,
+      "norm_label": "calculate expression tool"
+    },
+    {
+      "label": "Search Knowledge Tool",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/Tools/tool.py",
+      "source_location": "line 107",
+      "id": "tool_py_search_knowledge",
+      "community": 22,
+      "norm_label": "search knowledge tool"
+    },
+    {
+      "label": "Get Stock Price Tool",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/Tools/tool.py",
+      "source_location": "line 4",
+      "id": "tool_py_get_stock_price",
+      "community": 23,
+      "norm_label": "get stock price tool"
+    },
+    {
+      "label": "Search News Tool",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/Tools/tool.py",
+      "source_location": "line 27",
+      "id": "tool_py_search_news",
+      "community": 24,
+      "norm_label": "search news tool"
+    },
+    {
+      "label": "RAG Reference Implementation",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/reference/rag.py",
+      "source_location": null,
+      "id": "rag_py",
+      "community": 0,
+      "norm_label": "rag reference implementation"
+    },
+    {
+      "label": "Custom Embeddings Class",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/reference/rag.py",
+      "source_location": "line 13",
+      "id": "rag_py_customembeddings",
+      "community": 0,
+      "norm_label": "custom embeddings class"
+    },
+    {
+      "label": "ReAct Reference Implementation",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/reference/react.py",
+      "source_location": null,
+      "id": "react_py",
+      "community": 0,
+      "norm_label": "react reference implementation"
+    },
+    {
+      "label": "Session Memory Reference",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/reference/memory.py",
+      "source_location": null,
+      "id": "memory_py",
+      "community": 12,
+      "norm_label": "session memory reference"
+    },
+    {
+      "label": "DingTalk Stream Bot",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/reference/dingtalk.py",
+      "source_location": null,
+      "id": "dingtalk_py",
+      "community": 2,
+      "norm_label": "dingtalk stream bot"
+    },
+    {
+      "label": "LangChain Bot Handler",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/reference/dingtalk.py",
+      "source_location": "line 64",
+      "id": "dingtalk_py_langchainbothandler",
+      "community": 2,
+      "norm_label": "langchain bot handler"
+    },
+    {
+      "label": "User Tools Intent",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/intend.py",
+      "source_location": "line 4",
+      "id": "intend_user_tools",
+      "community": 0,
+      "norm_label": "user tools intent"
+    },
+    {
+      "label": "Query Knowledge Intent",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/intend.py",
+      "source_location": "line 9",
+      "id": "intend_quary_knowledge",
+      "community": 0,
+      "norm_label": "query knowledge intent"
+    },
+    {
+      "label": "Agent ReAct Intent",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/intend.py",
+      "source_location": "line 13",
+      "id": "intend_agetn_react",
+      "community": 0,
+      "norm_label": "agent react intent"
+    },
+    {
+      "label": "Emotion Chat Intent",
+      "file_type": "code",
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/intend.py",
+      "source_location": "line 17",
+      "id": "intend_emotion_chat",
+      "community": 0,
+      "norm_label": "emotion chat intent"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "feishu.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "feishu_py",
+      "target": "myagent_feishu_setup_logger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "feishu.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "feishu_py",
+      "target": "myagent_feishu_define_options",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "feishu.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "feishu_py",
+      "target": "myagent_feishu_agent_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "feishu.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "feishu_py",
+      "target": "myagent_feishu_do_p2_im_message_receive_v1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "feishu.py",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "feishu_py",
+      "target": "myagent_feishu_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/feishu.py",
+      "source_location": "line 52",
+      "weight": 1.0,
+      "source": "feishu_py",
+      "target": "agent_py_get_agent"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/feishu.py",
+      "source_location": "line 14",
+      "weight": 1.0,
+      "source": "feishu_py",
+      "target": "llm_py_base_llm"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/feishu.py",
+      "source_location": "line 19",
+      "weight": 1.0,
+      "source": "feishu_py",
+      "target": "feishu_processed_messages"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "/mnt/e/test/proj/myagent/reference/dingtalk.py",
+      "source_location": null,
+      "weight": 0.85,
+      "source": "feishu_py",
+      "target": "dingtalk_py"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "feishu.py",
+      "source_location": "L128",
+      "weight": 1.0,
+      "source": "myagent_feishu_main",
+      "target": "myagent_feishu_setup_logger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "feishu.py",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "myagent_feishu_main",
+      "target": "myagent_feishu_define_options",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "feishu.py",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "myagent_feishu_do_p2_im_message_receive_v1",
+      "target": "myagent_feishu_agent_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "feishu.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "myagent_feishu_agent_response",
+      "target": "agent_agent_get_agent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "reference_dingtalk_py",
+      "target": "reference_dingtalk_setup_logger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "reference_dingtalk_py",
+      "target": "reference_dingtalk_define_options",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "reference_dingtalk_py",
+      "target": "reference_dingtalk_create_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "reference_dingtalk_py",
+      "target": "reference_dingtalk_langchainbothandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "reference_dingtalk_py",
+      "target": "reference_dingtalk_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "reference_dingtalk_main",
+      "target": "reference_dingtalk_setup_logger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "reference_dingtalk_main",
+      "target": "reference_dingtalk_define_options",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "reference_dingtalk_langchainbothandler",
+      "target": "reference_dingtalk_langchainbothandler_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "reference_dingtalk_langchainbothandler",
+      "target": "reference_dingtalk_langchainbothandler_process",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/dingtalk.py",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "reference_dingtalk_main",
+      "target": "reference_dingtalk_langchainbothandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/memory.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "reference_memory_py",
+      "target": "reference_memory_get_session_history",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/rag.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "reference_rag_py",
+      "target": "reference_rag_customembeddings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/rag.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "reference_rag_py",
+      "target": "reference_rag_format_documents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/rag.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "reference_rag_customembeddings",
+      "target": "embeddings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/rag.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "reference_rag_customembeddings",
+      "target": "reference_rag_customembeddings_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/rag.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "reference_rag_customembeddings",
+      "target": "reference_rag_customembeddings_embed_documents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/rag.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "reference_rag_customembeddings",
+      "target": "reference_rag_customembeddings_embed_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/rag.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "reference_rag_customembeddings_embed_query",
+      "target": "reference_rag_customembeddings_embed_documents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/react.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "reference_react_py",
+      "target": "reference_react_get_current_weather",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/react.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "reference_react_py",
+      "target": "reference_react_calculate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/react.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "reference_react_py",
+      "target": "reference_react_search_knowledge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/react.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "reference_react_rationale_21",
+      "target": "reference_react_get_current_weather",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/react.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "reference_react_rationale_32",
+      "target": "reference_react_calculate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "reference/react.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "reference_react_rationale_71",
+      "target": "reference_react_search_knowledge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_agent_agent_py",
+      "target": "agent_agent_intendforecast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_agent_agent_py",
+      "target": "agent_agent_nlu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "src_agent_agent_py",
+      "target": "agent_agent_get_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "agent_agent_intendforecast",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "agent_agent_get_agent",
+      "target": "agent_agent_nlu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/agent/agent_tools.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "agent_agent_tools_toolagent_invoke",
+      "target": "agent_agent_get_agent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent_rag.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_agent_agent_rag_py",
+      "target": "agent_agent_rag_ragagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent_rag.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "agent_agent_rag_ragagent",
+      "target": "agent_agent_rag_ragagent_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent_rag.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "agent_agent_rag_ragagent",
+      "target": "agent_agent_rag_ragagent_format_documents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent_rag.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "agent_agent_rag_ragagent",
+      "target": "agent_agent_rag_ragagent_invoke",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent_react.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_agent_agent_react_py",
+      "target": "agent_agent_react_reactagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent_react.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "agent_agent_react_reactagent",
+      "target": "agent_agent_react_reactagent_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent_react.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "agent_agent_react_reactagent",
+      "target": "agent_agent_react_reactagent_invoke",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent_tools.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_agent_agent_tools_py",
+      "target": "agent_agent_tools_toolagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent_tools.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "agent_agent_tools_toolagent",
+      "target": "agent_agent_tools_toolagent_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/agent_tools.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "agent_agent_tools_toolagent",
+      "target": "agent_agent_tools_toolagent_invoke",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_agent_tools_tool_py",
+      "target": "tools_tool_get_stock_price",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "src_agent_tools_tool_py",
+      "target": "tools_tool_search_news",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "src_agent_tools_tool_py",
+      "target": "tools_tool_get_current_weather",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "src_agent_tools_tool_py",
+      "target": "tools_tool_calculate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "src_agent_tools_tool_py",
+      "target": "tools_tool_search_knowledge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "tools_tool_rationale_6",
+      "target": "tools_tool_get_stock_price",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "tools_tool_rationale_29",
+      "target": "tools_tool_search_news",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "tools_tool_rationale_60",
+      "target": "tools_tool_get_current_weather",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "tools_tool_rationale_71",
+      "target": "tools_tool_calculate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/agent/Tools/tool.py",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "tools_tool_rationale_109",
+      "target": "tools_tool_search_knowledge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test/test_mock.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "test_test_mock_py",
+      "target": "test_test_mock_mockp2immessagereceivev1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test/test_mock.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "test_test_mock_py",
+      "target": "test_test_mock_mocklarkclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test/test_mock.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "test_test_mock_py",
+      "target": "test_test_mock_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test/test_mock.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "test_test_mock_mockp2immessagereceivev1",
+      "target": "test_test_mock_mockp2immessagereceivev1_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test/test_mock.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "test_test_mock_main",
+      "target": "test_test_mock_mockp2immessagereceivev1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test/test_mock.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "test_test_mock_mocklarkclient",
+      "target": "test_test_mock_mocklarkclient_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test/test_mock.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "test_test_mock_mocklarkclient",
+      "target": "test_test_mock_mocklarkclient_mock_reply",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test/test_mock.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "test_test_mock_main",
+      "target": "test_test_mock_mocklarkclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/feishu.py",
+      "source_location": "lines 73-76",
+      "weight": 1.0,
+      "source": "feishu_do_p2_im_message_receive_v1",
+      "target": "feishu_processed_messages"
+    },
+    {
+      "relation": "routes_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent.py",
+      "source_location": "line 34",
+      "weight": 1.0,
+      "source": "agent_py_get_agent",
+      "target": "agent_rag_py_ragagent"
+    },
+    {
+      "relation": "routes_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent.py",
+      "source_location": "line 37",
+      "weight": 1.0,
+      "source": "agent_py_get_agent",
+      "target": "agent_react_py_reactagent"
+    },
+    {
+      "relation": "routes_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent.py",
+      "source_location": "line 31",
+      "weight": 1.0,
+      "source": "agent_py_get_agent",
+      "target": "agent_tools_py_toolagent"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent.py",
+      "source_location": "line 28",
+      "weight": 1.0,
+      "source": "agent_py_get_agent",
+      "target": "intend_py_intend_map"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent.py",
+      "source_location": "line 18",
+      "weight": 1.0,
+      "source": "agent_py_nlu",
+      "target": "agent_py_intendforecast"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent.py",
+      "source_location": "line 14",
+      "weight": 1.0,
+      "source": "agent_py_nlu",
+      "target": "intend_py_intend_map"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent_rag.py",
+      "source_location": "line 6",
+      "weight": 1.0,
+      "source": "agent_rag_py_ragagent",
+      "target": "llm_py_embedding_model"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent_rag.py",
+      "source_location": "line 6",
+      "weight": 1.0,
+      "source": "agent_rag_py_ragagent",
+      "target": "llm_py_base_llm"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent_rag.py",
+      "source_location": null,
+      "weight": 0.75,
+      "source": "agent_rag_py_ragagent",
+      "target": "rag_py"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent_react.py",
+      "source_location": "line 19",
+      "weight": 1.0,
+      "source": "agent_react_py_reactagent",
+      "target": "tool_py_tool_list"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent_react.py",
+      "source_location": "line 4",
+      "weight": 1.0,
+      "source": "agent_react_py_reactagent",
+      "target": "llm_py_base_llm"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent_react.py",
+      "source_location": null,
+      "weight": 0.7,
+      "source": "agent_react_py_reactagent",
+      "target": "react_py"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agent_tools.py",
+      "source_location": "line 3",
+      "weight": 1.0,
+      "source": "agent_tools_py_toolagent",
+      "target": "tool_py_tool_list"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agmem.py",
+      "source_location": "line 3-22",
+      "weight": 1.0,
+      "source": "agmem_py_agentmemory",
+      "target": "agmem_py_agentmemory"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/agmem.py",
+      "source_location": null,
+      "weight": 0.65,
+      "source": "agmem_py_agentmemory",
+      "target": "memory_py"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/intend.py",
+      "source_location": "line 4",
+      "weight": 1.0,
+      "source": "intend_py_intend_map",
+      "target": "intend_user_tools"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/intend.py",
+      "source_location": "line 9",
+      "weight": 1.0,
+      "source": "intend_py_intend_map",
+      "target": "intend_quary_knowledge"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/intend.py",
+      "source_location": "line 13",
+      "weight": 1.0,
+      "source": "intend_py_intend_map",
+      "target": "intend_agetn_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/intend.py",
+      "source_location": "line 17",
+      "weight": 1.0,
+      "source": "intend_py_intend_map",
+      "target": "intend_emotion_chat"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/intend.py",
+      "source_location": "line 7",
+      "weight": 1.0,
+      "source": "intend_user_tools",
+      "target": "tool_py_tool_list"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/Tools/tool.py",
+      "source_location": null,
+      "weight": 0.6,
+      "source": "tool_py_get_current_weather",
+      "target": "tool_py_calculate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/reference/rag.py",
+      "source_location": "line 13",
+      "weight": 1.0,
+      "source": "rag_py",
+      "target": "rag_py_customembeddings"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "/mnt/e/test/proj/myagent/reference/dingtalk.py",
+      "source_location": "line 64",
+      "weight": 1.0,
+      "source": "dingtalk_py_langchainbothandler",
+      "target": "dingtalk_py"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "tool_based_agents",
+      "label": "Tool-Based Agent Implementation",
+      "nodes": [
+        "agent_py_get_agent",
+        "intend_user_tools",
+        "agent_react_py_reactagent",
+        "agent_tools_py_toolagent"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent"
+    },
+    {
+      "id": "intent_routing_system",
+      "label": "Intent Routing System",
+      "nodes": [
+        "agent_py_nlu",
+        "agent_py_intendforecast",
+        "intend_py_intend_map",
+        "intend_user_tools",
+        "intend_quary_knowledge",
+        "intend_agetn_react",
+        "intend_emotion_chat"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent"
+    },
+    {
+      "id": "llm_configuration_system",
+      "label": "LLM Configuration System",
+      "nodes": [
+        "llm_py_base_llm",
+        "llm_py_advanced_llm",
+        "llm_py_embedding_model"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "/mnt/e/test/proj/myagent/src/agent/llm.py"
+    }
+  ]
+}
