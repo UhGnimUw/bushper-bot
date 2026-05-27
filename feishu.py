@@ -100,7 +100,10 @@ def agent_response(user_input: str, chat_id: str, logger) -> str:
         agent = get_agent(user_input, session_id)
         if agent is None:
             return "无法理解您的意图，请重试。"
-        return agent.invoke(user_input, session_id)
+        text, needs_human_input = agent.invoke(user_input, session_id)
+        if needs_human_input:
+            return f"[需要补充信息] {text}"
+        return text
     except Exception as e:
         logger.error('Agent调用出错: %s', str(e))
         return f"抱歉，处理出错了：{str(e)}"
