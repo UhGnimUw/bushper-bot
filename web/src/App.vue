@@ -4,6 +4,7 @@
       <h1>🤖 Agent Chat</h1>
       <nav>
         <router-link to="/">对话</router-link>
+        <router-link to="/graph">知识图谱</router-link>
         <router-link to="/monitor">监控</router-link>
         <router-link to="/feishu">飞书会话</router-link>
       </nav>
