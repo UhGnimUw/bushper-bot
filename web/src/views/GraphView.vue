@@ -5,8 +5,8 @@
     </div>
     <div class="graph-container">
       <div class="graph-main">
-        <div class="graph-svg-wrapper">
-          <svg ref="svgEl" width="1200" height="700" id="svg1"></svg>
+        <div class="graph-scroll" ref="scrollEl">
+          <svg ref="svgEl" id="svg1"></svg>
         </div>
       </div>
       <div class="sidebar">
@@ -44,6 +44,7 @@ import { ref, onMounted, nextTick } from 'vue'
 import * as d3 from 'd3'
 
 const svgEl = ref(null)
+const scrollEl = ref(null)
 const queryText = ref('')
 const answer = ref('')
 const searching = ref(false)
@@ -78,8 +79,10 @@ async function loadGraphData() {
 function showData(data) {
   graph = data
   const svg = d3.select(svgEl.value)
-  const width = svg.attr('width')
-  const height = svg.attr('height')
+  const container = scrollEl.value
+  const width = Math.max(1400, container?.clientWidth || 1400)
+  const height = Math.max(800, container?.clientHeight || 800)
+  svg.attr('width', width).attr('height', height)
 
   simulation = d3.forceSimulation()
     .force('link', d3.forceLink().id(d => d.id))
@@ -306,15 +309,14 @@ async function doSearch() {
   flex-direction: column;
 }
 
-.graph-svg-wrapper {
+.graph-scroll {
   flex: 1;
   overflow: auto;
-  padding: 10px;
+  min-height: 0;
 }
 
-.graph-svg-wrapper svg {
+.graph-scroll svg {
   display: block;
-  margin: 0 auto;
 }
 
 .sidebar {
