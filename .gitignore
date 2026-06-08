@@ -1,0 +1,48 @@
+# Environment and secrets
+.env
+.env.local
+.env.*
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Caches
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.hypothesis/
+
+# Node
+web/node_modules/
+web/dist/
+web/.vite/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archives and temp
+archive/
+temp_tools/
+graphify-out/
+data/
