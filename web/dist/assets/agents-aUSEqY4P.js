@@ -1,0 +1,1 @@
+import{c as s}from"./index-DSaKU-aJ.js";const a={list:()=>s.get("/api/agents"),stats:()=>s.get("/api/agents/stats"),sessions:t=>s.get("/api/agents/sessions",{params:t}),tokenUsage:t=>s.get("/api/agents/token-usage",{params:t})};export{a as agentsApi};
