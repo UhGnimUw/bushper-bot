@@ -1,13 +1,15 @@
 #!/usr/bin/env python
 """
-飞书 Stream 机器人 - 增强版
-- 保留原 agent 逻辑（src.agent.agent.get_agent）
-- 复用 reference/fsapp.py 的 UI/消息处理模式
+飞书 Stream 机器人 - Agent API 客户端版
+- 复用 reference/fsapp.py 的 UI/消息处理（媒体、任务卡片、命令）
+- Agent 调用改为 HTTP: POST {AGENT_API_URL}/chat, DELETE {AGENT_API_URL}/clear/{session_id}
+- 不再 import src.agent.*；与 web_server.py 解耦，可独立部署
 """
 import logging
 import glob, json, os, queue as Q, re, sys, threading, time
 from collections import deque
 from dotenv import load_dotenv
+import requests
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, PROJECT_ROOT)
@@ -16,9 +18,6 @@ os.chdir(PROJECT_ROOT)
 import traceback
 import lark_oapi as lark
 from lark_oapi.api.im.v1 import *
-
-from src.agent.agent import get_agent
-from src.agent.agmem import session_store
 
 load_dotenv()
 
@@ -408,11 +407,55 @@ def _build_step_detail(resp, tool_calls):
     return "\n\n".join(parts)
 
 
+# ── Agent API 客户端 ─────────────────────────────────────────────────────────
+
+AGENT_API_URL = os.getenv("AGENT_API_URL", "http://localhost:8000").rstrip("/")
+AGENT_TIMEOUT_SEC = 900
+AGENT_CONNECT_TIMEOUT = 30
+
+
+class AgentAPIError(Exception):
+    pass
+
+
+def _agent_chat(message: str, session_id: str) -> dict:
+    """POST /chat → {response, session_id, needs_human_input}"""
+    url = f"{AGENT_API_URL}/chat"
+    try:
+        r = requests.post(
+            url,
+            json={"message": message, "session_id": session_id},
+            timeout=(AGENT_CONNECT_TIMEOUT, AGENT_TIMEOUT_SEC),
+        )
+        r.raise_for_status()
+        return r.json()
+    except requests.Timeout as e:
+        raise AgentAPIError(f"agent API timeout: {e}") from e
+    except requests.HTTPError as e:
+        raise AgentAPIError(f"agent API HTTP {r.status_code}: {r.text[:200]}") from e
+    except requests.RequestException as e:
+        raise AgentAPIError(f"agent API request failed: {e}") from e
+    except ValueError as e:
+        raise AgentAPIError(f"agent API returned non-JSON: {e}") from e
+
+
+def _agent_clear(session_id: str) -> bool:
+    """DELETE /clear/{session_id} → bool"""
+    if not session_id:
+        return False
+    url = f"{AGENT_API_URL}/clear/{session_id}"
+    try:
+        r = requests.delete(url, timeout=(AGENT_CONNECT_TIMEOUT, 30))
+        return r.ok
+    except requests.RequestException as e:
+        print(f"[WARN] clear session {session_id} failed: {e}")
+        return False
+
+
 # ── 飞书 API 配置 ────────────────────────────────────────────────────────────
 
 APP_ID = os.getenv("FEISHU_APP_ID", "")
 APP_SECRET = os.getenv("FEISHU_APP_SECRET", "")
-AGENT_TIMEOUT_SEC = 900
 
 processed_messages: deque = deque(maxlen=200)
 _recent_inputs: deque = deque(maxlen=100)
@@ -421,6 +464,7 @@ _INPUT_TIMEOUT = 30 * 60
 
 
 def _session_timeout_checker():
+    """30 分钟无新输入 → 通过 API 清除服务端会话历史."""
     while True:
         time.sleep(5 * 60)
         now = time.time()
@@ -429,8 +473,8 @@ def _session_timeout_checker():
             if now - t >= _INPUT_TIMEOUT:
                 to_clear.append(chat_id)
         for chat_id in to_clear:
-            session_store.clear_session(chat_id)
-            del _last_input_info[chat_id]
+            _agent_clear(chat_id)
+            _last_input_info.pop(chat_id, None)
 
 
 _thread = threading.Thread(target=_session_timeout_checker, daemon=True)
@@ -548,9 +592,9 @@ user_tasks: dict = {}
 
 
 def agent_response(user_input: str, chat_id: str, logger) -> str:
-    """保留原 feishu.py 的 session 管理 + agent 调用逻辑"""
+    """通过 HTTP 调用 agent API；保持与原版一致的 session/超时语义."""
     if user_input.strip().lower() in ["清除历史", "reset", "clear"]:
-        session_store.clear_session(chat_id)
+        _agent_clear(chat_id)
         _last_input_info.pop(chat_id, None)
         return "已清除会话历史"
 
@@ -562,7 +606,7 @@ def agent_response(user_input: str, chat_id: str, logger) -> str:
         if input_hash == prev_hash and now - prev_time < _INPUT_TIMEOUT:
             session_id = chat_id
         elif now - prev_time >= _INPUT_TIMEOUT:
-            session_store.clear_session(chat_id)
+            _agent_clear(chat_id)
             session_id = chat_id
         else:
             session_id = chat_id
@@ -572,10 +616,15 @@ def agent_response(user_input: str, chat_id: str, logger) -> str:
     _last_input_info[chat_id] = (input_hash, now, chat_id)
 
     try:
-        agent = get_agent(user_input, session_id)
-        if agent is None:
-            return "无法理解您的意图，请重试。"
-        return agent.invoke(user_input, session_id)
+        data = _agent_chat(user_input, session_id)
+        response = data.get("response") or ""
+        needs_human = data.get("needs_human_input", False)
+        if needs_human:
+            return f"[需要补充信息] {response}"
+        return response or "_(无响应)_"
+    except AgentAPIError as e:
+        logger.error('Agent API error: %s', str(e))
+        return f"抱歉，Agent 服务调用失败：{str(e)}"
     except Exception as e:
         logger.error('Agent调用出错: %s', str(e))
         return f"抱歉，处理出错了：{str(e)}"
@@ -654,7 +703,7 @@ def handle_command(open_id, cmd, chat_id=None):
             user_tasks[open_id]["running"] = False
         _send_cmd_response("正在停止...")
     elif op == "/new":
-        session_store.clear_session(chat_id or open_id)
+        _agent_clear(chat_id or open_id)
         _send_cmd_response("已开启新对话")
     elif op == "/help":
         _send_cmd_response("命令列表:\n/stop - 停止当前任务\n/new - 开启新对话\n/help - 显示帮助")
